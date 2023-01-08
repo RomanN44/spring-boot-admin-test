@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  security:
+    user:
+      name: "admin"
+      password: "admin"
+  boot:
+    admin:
+      instance-auth:
+        enabled: true
+        default-user-name: "client"
+        default-password: "client"
+#      client:
+#        username: "client"       #These two are needed so that the client
+#        password: "client"   #can register at the protected server api
+#        instance:
+#          metadata:
+#            user.name: "client"         #These two are needed so that the server
+#            user.password: "client"     #can access the protected client endpoints
+      ui:
+        available-languages: english

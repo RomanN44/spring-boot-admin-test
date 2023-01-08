@@ -1,0 +1,35 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: client1
+  boot:
+    admin:
+      client:
+        url: http://localhost:8081
+        username: client
+        password: client
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+my:
+  field: string
+  list:
+    - a
+    - b
+    - c
+  some:
+    field1: 1
+    field2: 2
+
+logging:
+  file:
+    name: client1.log
